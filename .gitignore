@@ -1,0 +1,10 @@
+# .NET
+bin/
+obj/
+*.user
+.vs/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,38 @@
+.scores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 4px;
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.label.x {
+  color: var(--x-color);
+}
+
+.label.o {
+  color: var(--o-color);
+}
+
+.value {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+button {
+  width: 100%;
+}

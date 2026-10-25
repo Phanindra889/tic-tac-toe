@@ -1,0 +1,22 @@
+<section class="card">
+  <h2>Scoreboard</h2>
+
+  <div class="scores">
+    <div class="score">
+      <span class="label x">X Wins</span>
+      <span class="value" data-testid="x-wins">{{ scoreboard().xWins }}</span>
+    </div>
+    <div class="score">
+      <span class="label o">O Wins</span>
+      <span class="value" data-testid="o-wins">{{ scoreboard().oWins }}</span>
+    </div>
+    <div class="score">
+      <span class="label">Draws</span>
+      <span class="value" data-testid="draws">{{ scoreboard().draws }}</span>
+    </div>
+  </div>
+
+  <button class="secondary" [disabled]="disabled()" (click)="resetClicked.emit()">
+    Reset Scoreboard
+  </button>
+</section>

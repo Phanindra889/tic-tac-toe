@@ -1,0 +1,46 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+  width: min(100%, 340px);
+  aspect-ratio: 1;
+}
+
+.cell {
+  border: none;
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--border);
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.cell:not(:disabled):hover {
+  background: var(--surface-hover);
+}
+
+.cell:not(:disabled):active {
+  transform: scale(0.96);
+}
+
+/* Keep marks fully visible even when the cell can't be clicked. */
+.cell:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.cell.x {
+  color: var(--x-color);
+}
+
+.cell.o {
+  color: var(--o-color);
+}
+
+.cell.winning {
+  background: var(--win-background);
+  box-shadow: inset 0 0 0 2px var(--win-border);
+}
